@@ -1,0 +1,14 @@
+@charset "UTF-8";
+#CourseSelectTable{
+				border:1px solid black;
+				width:100%;
+				height:500px;
+				border-collapse: collapse;
+			}
+			tr{
+				border:1px solid black;
+			}
+			td{
+				border:1px solid black;
+				text-align:center;
+			}

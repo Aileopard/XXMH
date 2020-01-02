@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+                           "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.ujs.mapper.StudentMapper">
+
+<!-- 查询一条学生信息 -->
+ <select id="selectStudent" parameterType="String" resultType="student">
+   select * 
+   from student 
+   where Stu_id = #{Stu_id} 
+   and Stu_password =#{Stu_password}
+ </select>
+ 
+ <!-- 插入一条学生信息，还需要改 -->
+ <insert id="InsertStudent" parameterType="Student">
+   insert into student(Stu_id,Stu_name,Stu_password) values(#{Stu_id},#{Stu_name},#{Stu_password})
+ </insert>
+ 
+ <!-- 删除一条学生信息 -->
+ <delete id="DeleteStudent" parameterType="Student">
+   delete from student where Stu_id= #{Stu_id}
+ </delete>
+ 
+ <!-- 更新一条学生信息，还需要改 -->
+ <update id="UpdateStudent" parameterType="Student">
+   update student set Stu_name= #{Stu_name} where Stu_id= #{Stu_id}
+ </update>
+ 
+</mapper>
