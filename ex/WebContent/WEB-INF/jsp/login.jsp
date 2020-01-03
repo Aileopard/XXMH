@@ -11,6 +11,9 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/1.js"></script>
 </head>
 <body>
+		<div id="login_header">
+			<!-- <img class="logo" alt="" src="../../static/img/logo.png" > --> 
+		</div>	
 			<div class="login_banner">
 			
 				<div id="l_content">
@@ -27,12 +30,11 @@
 							
 							<div class="msg_cont">
 								<b></b>
-								<span id="erroMessage" class="errorMsg">请输入用户名和密码</span>
+								<span id="erroMessage" class="errorMsg">${msg}</span>
 							</div>
-							
 							<div class="form">
 							<!-- 首先会判断loginForm的方法检查form表单是否合理，如果合理则提交到以/login.action结尾的请求中 -->
-								<form id="loginForm" action="${pageContext.request.contextPath }/login" >
+								<form id="loginForm" action="${pageContext.request.contextPath }/login" method="post">
 								
 									<label>用户账号：</label>
 									<input name="id" id="id" type="text" placeholder="请输入账号"  autocomplete="off" tabindex="1"/>

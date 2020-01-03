@@ -71,7 +71,7 @@ public class LoginController {
 				default:
 				{
 					System.out.println("登录错误");
-					model.addAttribute("errorMsg","没有该用户");
+					model.addAttribute("msg","没有该用户");
 					//如果用户和密码格式正确但是却没有该用户
 					return "login";
 				}
